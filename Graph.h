@@ -7,14 +7,14 @@
 class Graph{
 public:
     bool isOpen = true;
-    const int Width = 1000;
-    const int Height = 100;
+    const int Width = 1080;
+    const int Height = 720;
     const int FRAMERATE = 100;
-    const int EatRadius = 15;
+    const int EatRadius = 10;
     const int UnitRadius = 25;
     int INDENT;
     sf::Event ev;
-    sf::RenderWindow window = sf::RenderWindow(sf::VideoMode(1000,100), "Test game");
+    sf::RenderWindow window = sf::RenderWindow(sf::VideoMode(1080,720), "Test game");
     Graph(){
         this->window.setFramerateLimit(FRAMERATE);
         this->INDENT = Width / 2;
@@ -60,5 +60,7 @@ public:
         }
 
         this->window.display();
+
+        std::cout << units[0].eat << std::endl;
     }
 };

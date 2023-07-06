@@ -1,10 +1,10 @@
 #include <iostream>
-#include "random.h"
 
 class Eat{
 public:
-    int x;
-    Eat(int x){
+    int x, sat;
+    Eat(int x, int sat){
         this->x = x;
+        this->sat = sat;
     }
 };

@@ -2,6 +2,8 @@
 
 class Units{
 public:
+    const int EAT_TO_MOVE = 1;
+    const int EAT_TO_DIVISION = 100;
     //vars
     int x, eat;
     //gens
@@ -13,5 +15,6 @@ public:
     }
     void update(){
         x += gen_speed;
+        eat -= EAT_TO_MOVE;
     }
 };
